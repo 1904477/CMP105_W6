@@ -4,12 +4,14 @@
 #include "Framework/Input.h"
 #include <string.h>
 #include <iostream>
-
+#include "Mario.h"
 
 class Level{
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
+
+	Mario mario;
 
 	void handleInput(float dt);
 	void update(float dt);
