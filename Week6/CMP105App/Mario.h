@@ -2,6 +2,7 @@
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
 #include "Framework/Vector.h"
+#include <iostream>
 class Mario:public GameObject
 {
 public:
@@ -10,7 +11,11 @@ public:
 	float marioSpeed = 100.f;
 	float marioScale = 200.f;
 	float acceleration = 200.f;
-	sf::Vector2f  gravity, velocity;
+
+	bool isJumping;
+
+
+	sf::Vector2f  gravity, velocity,jump;
 	
 
 	void marioSetTexture();
