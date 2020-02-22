@@ -5,6 +5,7 @@
 #include <string.h>
 #include <iostream>
 #include "Mario.h"
+#include "beachBall.h"
 
 class Level{
 public:
@@ -12,7 +13,7 @@ public:
 	~Level();
 
 	Mario mario;
-
+	beachBall ball;
 	void handleInput(float dt);
 	void update(float dt);
 	void render();

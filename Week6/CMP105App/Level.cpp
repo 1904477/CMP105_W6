@@ -7,7 +7,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 
 	// initialise game objects
 	mario.marioSetTexture();
-
+	ball.setTextureBall();
 
 }
 
@@ -25,7 +25,7 @@ void Level::handleInput(float dt)
 // Update game objects
 void Level::update(float dt)
 {
-	
+	ball.update(dt,input->getMouseX(),input->getMouseY());
 	mario.update(dt,input,window->getSize().x, window->getSize().y);
 }
 
@@ -34,6 +34,7 @@ void Level::render()
 {
 	beginDraw();
 	window->draw(mario);
+	window->draw(ball);
 	endDraw();
 }
 
