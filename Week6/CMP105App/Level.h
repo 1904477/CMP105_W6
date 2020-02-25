@@ -6,6 +6,7 @@
 #include <iostream>
 #include "Mario.h"
 #include "beachBall.h"
+#include "Bullet.h"
 
 class Level{
 public:
@@ -14,6 +15,7 @@ public:
 
 	Mario mario;
 	beachBall ball;
+	Bullet bullet;
 	void handleInput(float dt);
 	void update(float dt);
 	void render();

@@ -19,7 +19,7 @@ void Mario::marioSetTexture()
 	setTexture(&marioTexture);
 }
 
-void Mario::update(float dt, Input* input, int wX, int wY)
+void Mario::update(float dt,Input*input, int wX, int wY)
 {
 	//falling mario
 	sf::Vector2f pos = velocity * dt + 0.5f * gravity * dt * dt;
@@ -42,7 +42,7 @@ void Mario::update(float dt, Input* input, int wX, int wY)
 		}
 	}
 
-	if (input->isMouseLDown())
+	if (input->isKeyDown(sf::Keyboard::R))
 	{
 		setPosition(input->getMouseX(), input->getMouseY());
 
