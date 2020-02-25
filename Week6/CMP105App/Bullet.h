@@ -11,23 +11,20 @@ class Bullet:public GameObject
 public:
 	Bullet();
 
-	   int x;
-	   int y;
+	
 	   bool mousedown;
 	   bool activation;
-
+	   bool fired;
 	float speed;
 	float bulletScale;
-	float acceleration;
-	float distancex;
-	float distancey;
-	float distance;
+
 	float finaldistance;
 
 	void setTextureBullet();
 	void update(float dt, Input* input);
-
-	sf::Vector2f  gravity, velocity,direction,pos;
+	void Handleinput(Input* input);
+	
+	sf::Vector2f  mouseStartPos,mouseEndPos,gravity, velocity,direction;
 	sf::Texture bulletText;
 
 };

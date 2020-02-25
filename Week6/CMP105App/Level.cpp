@@ -19,7 +19,7 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	bullet.Handleinput(input);
 }
 
 // Update game objects
